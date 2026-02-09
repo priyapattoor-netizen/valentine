@@ -2,27 +2,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>One Question 💖</title>
+<title>Just One Question 💖</title>
+
 <style>
 body {
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  text-align: center;
-  font-family: Arial, sans-serif;
+  margin: 0;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
 }
 
 h1 {
   margin-top: 120px;
-  font-size: 40px;
+  font-size: 38px;
   color: #b30059;
 }
 
 button {
-  padding: 15px 30px;
+  padding: 16px 32px;
   font-size: 20px;
   border: none;
-  border-radius: 12px;
+  border-radius: 30px;
   cursor: pointer;
   margin: 20px;
 }
@@ -30,21 +32,34 @@ button {
 #yes {
   background-color: #ff4d88;
   color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 #no {
   background-color: white;
   position: absolute;
 }
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
 </style>
 </head>
 
 <body>
 
-<h1>Will you be my Valentine? 💕</h1>
+<h1>Hey ❤️<br>Will you be my Valentine? 💕</h1>
 
-<button id="yes" onclick="yesClicked()">YES ❤️</button>
-<button id="no" onmouseover="moveNo()">NO 😏</button>
+<button id="yes" onclick="yesClicked()">YES 😍</button>
+<button id="no" onmouseover="moveNo()">NO 🙈</button>
 
 <script>
 function moveNo() {
@@ -56,9 +71,22 @@ function moveNo() {
 
 function yesClicked() {
   document.body.innerHTML =
-    "<h1>YAYYYY 😍❤️<br>See you this Valentine’s 💃💖</h1>";
+    "<h1>YAYYYY 🥰❤️<br>You’re officially my Valentine 💃💖<br><br>Love you 😘</h1>";
 }
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}
+
+setInterval(createHeart, 300);
 </script>
 
 </body>
 </html>
+
