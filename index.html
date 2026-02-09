@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Just One Question 💖</title>
+<title>For Gautham 💖</title>
 
 <style>
 body {
@@ -15,13 +14,13 @@ body {
 }
 
 h1 {
-  margin-top: 120px;
-  font-size: 38px;
+  margin-top: 110px;
+  font-size: 36px;
   color: #b30059;
 }
 
 button {
-  padding: 16px 32px;
+  padding: 16px 34px;
   font-size: 20px;
   border: none;
   border-radius: 30px;
@@ -32,7 +31,7 @@ button {
 #yes {
   background-color: #ff4d88;
   color: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 #no {
@@ -43,7 +42,7 @@ button {
 .heart {
   position: fixed;
   bottom: -20px;
-  font-size: 24px;
+  font-size: 26px;
   animation: floatUp 5s linear infinite;
 }
 
@@ -56,7 +55,10 @@ button {
 
 <body>
 
-<h1>Hey ❤️<br>Will you be my Valentine? 💕</h1>
+<h1>
+Hey G 😌❤️<br>
+Will you be my Valentine? 💕
+</h1>
 
 <button id="yes" onclick="yesClicked()">YES 😍</button>
 <button id="no" onmouseover="moveNo()">NO 🙈</button>
@@ -71,15 +73,15 @@ function moveNo() {
 
 function yesClicked() {
   document.body.innerHTML =
-    "<h1>YAYYYY 🥰❤️<br>You’re officially my Valentine 💃💖<br><br>Love you 😘</h1>";
+    "<h1>YAYYYY 🥰❤️<br>Gautham, you’re officially my Valentine 💃💖<br><br>Forever yours,<br><b>Kutties 😘</b></h1>";
 }
 
 function createHeart() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 5000);
 }
@@ -89,4 +91,9 @@ setInterval(createHeart, 300);
 
 </body>
 </html>
+
+
+
+
+
 
